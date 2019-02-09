@@ -35,7 +35,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/api/v1/products', products);
+// app.use('/api/v1/products', products);
+app.use('/products', products);
 
 var Category = app.resource = restful.model('category', mongoose.Schema({
   cat_name: String,
